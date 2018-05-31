@@ -1,0 +1,37 @@
+
+plugins {
+  id "org.springframework.boot" version "2.0.2.RELEASE" apply false
+}
+
+allprojects {
+    group = 'org.blah.gradle-multiproject'
+    version = '0.0.1-SNAPSHOT'
+}
+
+
+//  buildscript {
+//     repositories {
+//         mavenCentral()
+//     }
+//     dependencies {
+//         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
+//     }
+// }
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+// project(':web') {
+    
+//     apply plugin: 'org.springframework.boot'
+
+//     dependencies {
+//         compile project(':service')
+//     }
+
+// }
